@@ -29,7 +29,7 @@ This is a local controller, not an away-from-home remote-access service. No Wi-F
 
 ## Verification and limits
 
-Release 2.3.0 passed the exact-board PlatformIO build, actual OTA slot-size check, portal and cloud UI simulations, compatibility/version/URL checks, flame continuity tests and browser preview. Its public download is checked with the firmware's selected HTTPS trust roots and SHA-256. On-board cloud execution still requires testing on the installed lantern; these checks do not claim hardware verification.
+The unified-portal release passed the exact-board PlatformIO build, actual OTA slot-size check, portal and cloud UI simulations, compatibility/version/URL checks, flame continuity tests and browser preview. Its public download is checked with the firmware's selected HTTPS trust roots and SHA-256. **Hardware verified on 9 November 2026:** the installed lantern downloaded firmware 2.3.2 directly from GitHub, verified it, restarted into 2.3.2 and retained its saved lighting settings. No USB or local firmware-file upload was used for that cloud update. The secure connection timeout is 20 seconds; failed checks can be retried from the portal.
 
 The updater uses verified HTTPS and a SHA-256 manifest, and aborts incomplete/mismatched downloads before activating the image. It does not implement Secure Boot, separately signed firmware or automatic rollback after a defective new application's boot. Maintain power during updates. Manual recovery upload remains available.
 
